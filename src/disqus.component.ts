@@ -82,7 +82,7 @@ export class DisqusComponent implements OnChanges, OnDestroy {
 
         /** Add DISQUS script */
         let diqusScript = this.renderer.createElement(this.el.nativeElement, 'script');
-        diqusScript.src = `//${this.shortname}.disqus.com/embed.js`;
+        diqusScript.src = `https://${this.shortname}.disqus.com/embed.js`;
         diqusScript.async = true;
         diqusScript.type = 'text/javascript';
         this.renderer.setElementAttribute(diqusScript, 'data-timestamp', new Date().getTime().toString());
